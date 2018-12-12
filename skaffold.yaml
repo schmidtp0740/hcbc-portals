@@ -1,0 +1,31 @@
+apiVersion: skaffold/v1alpha2
+kind: Config
+build:
+  tagPolicy:
+    envTemplate:
+      template: "{{.DOCKER_REGISTRY}}/schmidtp0740/medbo-portals:{{.VERSION}}"
+  artifacts:
+  - imageName: changeme
+    workspace: .
+    docker: {}
+  local: {}
+deploy:
+  kubectl:
+    manifests:
+profiles:
+- name: dev
+  build:
+    tagPolicy:
+      envTemplate:
+        template: "{{.DOCKER_REGISTRY}}/schmidtp0740/medbo-portals:{{.DIGEST_HEX}}"
+    artifacts:
+    - docker: {}
+    local: {}
+  deploy:
+    helm:
+      releases:
+      - name: medbo-portals
+        chartPath: charts/medbo-portals
+        setValueTemplates:
+          image.repository: "{{.DOCKER_REGISTRY}}/schmidtp0740/medbo-portals"
+          image.tag: "{{.DIGEST_HEX}}"
