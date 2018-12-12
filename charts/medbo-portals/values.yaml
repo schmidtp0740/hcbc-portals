@@ -16,8 +16,8 @@ service:
     fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
 resources:
   limits:
-    cpu: 800m
-    memory: 512Mi
+    cpu: 1600m
+    memory: 2056Mi
   requests:
     cpu: 200m
     memory: 128Mi
