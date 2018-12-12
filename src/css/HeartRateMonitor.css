@@ -1,0 +1,99 @@
+.hrm {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+}
+
+.img-subtext {
+    color: white;
+    font-size: 1em;
+    margin: 0.6em 0;
+}
+
+.btn-grp {
+    padding: 1em;
+    margin: 1em;
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+}
+
+.btn {
+    font-size: 1em;
+    padding: 0.6em;
+    margin: 0.6em;
+    border-radius: 7px;
+    color: white;
+}
+
+.start-btn {
+    background-color: green;
+}
+
+.stop-btn {
+    background-color: red;
+}
+
+.clear-btn {
+    background-color: grey;
+}
+
+.heart-beat {
+    position: relative;
+    width: 150px;
+    height: 73px;
+    margin: 20px auto;
+}
+
+.fade-in {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #292c33;
+    top: 0;
+    right: 0;
+    animation: heartRateIn 2.5s linear infinite;
+}
+
+.fade-out {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -120%;
+    animation: heartRateOut 2.5s linear infinite;
+    background: rgb(41, 44, 51);
+    background: -moz-linear-gradient(left, rgb(41, 44, 51) 0%, rgb(41, 44, 51) 50%, rgb(41, 44, 50) 100%);
+    background: -webkit-linear-gradient(left, rgb(41, 44, 51) 0%, rgb(41, 44, 51) 50%, rgb(41, 44, 50) 100%);
+    background: -o-linear-gradient(left, rgb(41, 44, 51) 0%, rgb(41, 44, 51) 50%, rgb(41, 44, 50) 100%);
+    background: -ms-linear-gradient(left, rgb(41, 44, 51) 0%, rgb(41, 44, 51) 50%, rgb(41, 44, 50) 100%);
+    background: linear-gradient(to right, rgb(41, 44, 51) 0%, rgb(41, 44, 51) 80%, rgb(41, 44, 50) 100%);
+}
+
+
+@keyframes heartRateIn {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes heartRateOut {
+    0% {
+        left: -90%;
+    }
+    30% {
+        left: -90%;
+    }
+    100% {
+        left: 0;
+    }
+}

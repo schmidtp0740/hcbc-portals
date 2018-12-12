@@ -1,0 +1,52 @@
+.bpm {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.img-subtext {
+    color: white;
+    font-size: 1em;
+    margin: 0.6em 0;
+}
+
+.btn-grp {
+    padding: 1em;
+    margin: 1em;
+}
+
+.bpLogo {
+    height: 100%;
+    width: auto;
+}
+
+.btn {
+    font-size: 1em;
+    padding: 0.6em;
+    margin: 0.6em;
+    border-radius: 7px;
+    color: white;
+}
+
+.start-btn {
+    background-color: green;
+}
+
+.stop-btn {
+    background-color: red;
+}
+
+.clear-btn {
+    background-color: grey;
+}
+
+.bloodPressure {
+    position: relative;
+    width: 150px;
+    height: 73px;
+    margin: 20px auto;
+}
+
+
+
+

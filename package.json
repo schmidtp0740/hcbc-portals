@@ -3,14 +3,43 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "antd": "^3.10.1",
+    "axios": "^0.18.0",
+    "babel-preset-stage-1": "^6.1.18",
+    "flexbox": "0.0.3",
+    "history": "latest",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.23",
+    "momentjs": "^2.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-moment": "^0.8.2",
+    "react-redux": "5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "2.0.5",
+    "redux": "4.0.0",
+    "redux-promise": "^0.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.5",
+    "redux-thunk": "^2.3.0",
+    "thunk": "0.0.1"
   }
 }
