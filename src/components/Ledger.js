@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { List, message, Progress, Icon, Avatar, notification } from 'antd';
+import { List, message, Progress, Icon, Avatar, notification, Row, Col } from 'antd';
 
 import InfiniteScroll from 'react-infinite-scroller'; 
 
@@ -98,11 +98,19 @@ class Ledger extends Component {
                 renderItem={item => (
                 <List.Item key={item.rxid}>
                     <List.Item.Meta
-                    avatar={<Avatar shape="square" size="large" style={item.status === 'prescribed' ? { backgroundColor: '#D1B829'} : { backgroundColor: '#307351'}} icon={item.status === 'prescribed' ? 'solution' : 'medicine-box'} />}
-                    title={item.rxid}
-                    description={"Timestamp: " + (new Date(item.timestamp).toLocaleString())}
+                      avatar={ <Avatar shape="square" size="large" style={
+                          item.status === 'prescribed' ? { backgroundColor: '#D1B829'} : item.approved === 'true' ? { backgroundColor: '#307351'} : { backgroundColor: '#394053'} 
+                        }  
+                        icon={
+                          item.status === 'prescribed' ? 'solution' : item.approved === 'true' ? 'check' : 'medicine-box'}
+                      />}
+                      title={item.rxid}
+                      description={"Timestamp: " + (new Date(item.timestamp).toLocaleString())}
                     />
-                    <div>{"Status: " + item.status}</div>
+                    <Col>
+                      <Row><p>{"Status: " + item.status}</p></Row>
+                      <Row><p>{"Approved: " + item.approved}</p></Row>
+                    </Col>
                 </List.Item>
                 )}
             >
