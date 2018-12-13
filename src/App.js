@@ -6,6 +6,7 @@ import { Landing } from './components/Misc/Landing';
 import Doctor from './components/Doctor';
 import Pharmacist from "./components/Pharmacist";
 import Insurance from './components/Insurance';
+import Ledger from './components/Ledger';
 import Nav from "./components/Misc/Nav";
 import './css/App.css';
 
@@ -24,6 +25,7 @@ export default class App extends Component {
                             <Route path="/doctor" component={Doctor}/>
                             <Route path="/pharmacist" component={Pharmacist}/>
                             <Route path="/insurance" component={Insurance}/>
+                            <Route path="/ledger" component={Ledger}/>
                         </div>
                     </Content>
                 </Layout>

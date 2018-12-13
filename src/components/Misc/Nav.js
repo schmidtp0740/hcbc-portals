@@ -23,6 +23,9 @@ export default class Nav extends Component {
                         <Menu.Item key="4">
                             <a href='/insurance'>Insurance</a>
                         </Menu.Item>
+                        <Menu.Item key="5">
+                            <a href='/ledger'>Ledger</a>
+                        </Menu.Item>
                     </Menu>
                 </Layout>
             </nav>
