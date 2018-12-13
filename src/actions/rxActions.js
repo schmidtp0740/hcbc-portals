@@ -52,6 +52,7 @@ export const fillRx = data => async dispatch => {
 
 export const approveRx = (data) => async dispatch => {
     try {
+        data.timestamp = moment().valueOf()
         const res = await axios.put(rxUrl, data);
         dispatch({
             type: APPROVE_RX,
