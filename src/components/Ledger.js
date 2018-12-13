@@ -5,6 +5,7 @@ import InfiniteScroll from 'react-infinite-scroller';
 
 import { getAllData, getStatus } from '../actions/ledgerActions';
 
+import '../css/Ledger.css';
 
 class Ledger extends Component {
     state = {
@@ -108,8 +109,8 @@ class Ledger extends Component {
                       description={"Timestamp: " + (new Date(item.timestamp).toLocaleString())}
                     />
                     <Col>
-                      <Row><p>{"Status: " + item.status}</p></Row>
-                      <Row><p>{"Approved: " + item.approved}</p></Row>
+                      <Row><p className="rxItem">{"Status: " + item.status}</p></Row>
+                      <Row><p className="rxItem">{"Approved: " + item.approved}</p></Row>
                     </Col>
                 </List.Item>
                 )}
