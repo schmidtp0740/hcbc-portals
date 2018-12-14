@@ -1,4 +1,4 @@
-const url = "http://medbo-backend.jx-staging.129.213.177.165.nip.io"
+const url = "http://hcbc-backend.jx-staging.hcbc.cloudsolutionhubs.com"
 export const rxUrl = url+"/rx";
 export const insuranceUrl = url+"/insurance";
 export const pdUrl = url+"/pd";
