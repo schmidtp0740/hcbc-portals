@@ -4,7 +4,7 @@ pipeline {
   }
   environment {
     ORG = 'schmidtp0740'
-    APP_NAME = 'medbo-portals'
+    APP_NAME = 'hcbc-portals'
     CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
   }
   stages {
@@ -58,7 +58,7 @@ pipeline {
       }
       steps {
         container('nodejs') {
-          dir('./charts/medbo-portals') {
+          dir('./charts/hcbc-portals') {
             sh "jx step changelog --version v\$(cat ../../VERSION)"
 
             // release the helm chart
